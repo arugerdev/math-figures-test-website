@@ -1,0 +1,117 @@
+#root {
+  min-width: 90vw;
+  min-height: 90vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.testPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  justify-content: center;
+  gap: 128px;
+}
+
+.currentQuestion {
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+  height: auto;
+}
+
+
+.currentQuestion_image {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  width: 70vw;
+  height: 70vh;
+  max-width: 400px;
+  max-height: 400px;
+  aspect-ratio: 4 3;
+}
+
+.currentQuestion_text {
+  color: var(--textColor);
+  font-weight: 800;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.response {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  justify-content: center;
+}
+
+.response>form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.response_input {
+  display: flex;
+  width: 30%;
+  height: 2rem;
+  border: none;
+  padding: 4px 16px;
+  background: var(--background_lighter);
+  border-radius: 8px;
+  color: var(--textColor);
+}
+
+.submitResponse {
+  width: 75px;
+  height: 75px;
+  background: none;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.submitResponse>img {
+  width: 75px;
+  height: 75px;
+}
+
+.effect {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all .3s;
+  background: none;
+}
+
+.effect.correctEffect {
+  opacity: 1;
+  background: var(--correctColor);
+}
+
+.effect.wrongEffect {
+  opacity: 1;
+  background: var(--wrongColor);
+}
